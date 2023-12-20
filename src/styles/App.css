@@ -1,0 +1,176 @@
+/*
+This controls the body of the page
+You can use this to set the background color, margins, etc. as shown below
+*/
+
+html {
+  background: linear-gradient(
+    to bottom,
+    hsl(0, 0%, 49%) 0%,
+    hsl(0, 0%, 48.57%) 7.3%,
+    hsl(0, 0%, 47.34%) 12.9%,
+    hsl(0, 0%, 45.41%) 16.9%,
+    hsl(0, 0%, 42.86%) 20%,
+    hsl(0, 0%, 39.78%) 22.4%,
+    hsl(0, 0%, 36.27%) 24.5%,
+    hsl(0, 0%, 32.41%) 26.9%,
+    hsl(0, 0%, 28.3%) 29.8%,
+    hsl(0, 0%, 24.02%) 33.7%,
+    hsl(0, 0%, 19.67%) 39%,
+    hsl(0, 0%, 15.34%) 46%,
+    hsl(0, 0%, 11.12%) 55.2%,
+    hsl(0, 0%, 7.09%) 67%,
+    hsl(0, 0%, 3.36%) 81.8%,
+    hsl(0, 0%, 0%) 100%
+  );
+  height: 100%;
+  }
+
+
+
+  body {
+  margin: 10px;
+  padding: 15px;
+  }
+
+  /* This is used to make profile picture cropped as a circle */
+  .image img {
+    border-radius: 25%;
+    width: 400px;
+  }
+
+
+  .FrontPageTitle {
+    padding-bottom: 50px;
+    width: 100%;
+    box-sizing: content-box;
+    position: relative;
+  }
+  .FrontPageTitle h1 {
+    font-family: monospace;
+    color: #ffffff;
+    font-size: 80px;
+    margin: 0;
+    border-bottom: 2px solid rgb(75, 75, 75);
+  }
+
+  
+  /* Formatting for paragraph text */
+  p {
+    font-family: monospace;
+    color: #fff;
+    font-size: 22px;
+  }
+  
+  /* "a" refers to links, everything below controls the color and behavior of link objects */
+  a {
+    -webkit-transition: border-color 200ms ease, color 200ms ease;
+    transition: border-color 200ms ease, color 200ms ease;
+    color: #fff;
+    text-decoration: none;
+  }
+  a:hover {
+      border-bottom-color: #ffffff;
+      color: gold;
+  }
+    
+   a:focus {
+   border-bottom-color: #ffffff;
+   color: gold;
+  }
+  .center-link {
+    display: block;
+    text-align: center;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    width: 70%;
+  }
+  /* Anything marked as class="content" will have options below attached */
+  .content {
+    /*flex-grow: 4;*/
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+  /* below is special formatting for a custom object, here a social-icon class */
+  .social-icon {
+  
+  padding-right: 25px;
+  float: right;
+  border-bottom: 0px none #000;
+  }
+  
+  /* menu link settings */
+  .menu-link {
+    font-family: monospace;
+      margin: 1rem;
+      border: 3px solid #757575;
+      width: 300px; /* set the width to 100% minus the width of the .sidebar */
+      padding: 20px;
+      box-sizing: border-box;
+      height: relative; /* set the height of the box */
+      display: flex;
+      flex-direction: column;
+      float: left;
+  }
+  .menu-link h1{
+    padding-left: 0px;
+    color:#fff;
+    font-size: 2rem;
+  }
+  .menu-link h3{
+    margin: 0px;
+    color:#fff;
+    font-family: monospace;
+    font-size: 1rem;
+  }
+  .menu-link a{
+    font-size:1.5em;
+    line-height: 2.5rem;
+  }
+  .footer {
+      padding: 20px;
+      width: 30%;
+      height: 90px;
+      box-sizing: border-box;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+  }
+  /* WORDLE PROJECT CSS */
+  .containerWordle {
+    display: flex;
+    align-items: center;
+  }
+  .image-container {
+      display: flex;
+      justify-content: space-between;
+      float: right;
+  }
+
+  .image-container img {
+      width: 400px;
+      padding-right: 50px;
+  }
+  /* MESSAGE BOT CSS */
+  .containerMessage {
+    display:flex;
+    align-items: top;
+    padding-right: 0px;
+  }
+  .image-containerMessage img {
+    width:600px;
+    padding-right:20px;
+  }
+
+  /* C++ PLAYLIST CSS */
+  .containerMusic {
+    align-items: top;
+    display:flex;
+  }
+  .image-containerMusic img {
+    width:650px;
+    padding-right: 50px;
+  }
+  
