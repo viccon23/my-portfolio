@@ -1,3 +1,5 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import '../styles/App.css';
 import me from '../images/me.jpg';
 
@@ -10,9 +12,11 @@ function App() {
         <div class="menu-link">
             <div class="projects">
                 <h1>Projects:</h1>
-                <a href="/Wordle">Python Wordle Clone</a>
-                <a href="/DiscordMessageBot">Discord Message Bot</a>
-                <a href="/CPPMusicPlaylist">C++ Music Playlist</a>
+                <Link to="/Wordle">Python Wordle Clone</Link>
+                <br />
+                <Link to="/DiscordMessageBot">Discord Message Bot</Link>
+                <br />
+                <Link to="/CPPMusicPlaylist">C++ Music Playlist</Link>
             </div>
             <div class="Contact">
                 <h1>Contact Info:</h1>
