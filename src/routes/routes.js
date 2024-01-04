@@ -4,6 +4,7 @@ import App from '../components/App';
 import Wordle from '../components/Wordle';
 import DiscordMessageBot from '../components/DiscordMessageBot';
 import CPPMusicPlaylist from '../components/CPPMusicPlaylist';
+import BankersAlgorithm from '../components/BankersAlgorithm';
 const AppRoutes = () => {
   return (
     <Router>
@@ -12,6 +13,7 @@ const AppRoutes = () => {
         <Route path="/Wordle" element={<Wordle />} />
         <Route path="/DiscordMessageBot" element={<DiscordMessageBot />} />
         <Route path="/CPPMusicPlaylist" element={<CPPMusicPlaylist />} />
+        <Route path="/BankersAlgorithm" element={<BankersAlgorithm />} />
       </Routes>
     </Router>
   );

@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Typewriter } from 'react-simple-typewriter'
 import '../styles/App.css';
 import me from '../images/me.jpg';
 
 function App() {
   return (
     <>
-        <div class="FrontPageTitle">
-            <h1> Victor Contreras</h1>
-        </div>
+      <div class="mainPage">
+        <NameTitle />
         <div class="menu-link">
             <div class="projects">
                 <h1>Projects:</h1>
@@ -17,6 +17,8 @@ function App() {
                 <Link to="/DiscordMessageBot">Discord Message Bot</Link>
                 <br />
                 <Link to="/CPPMusicPlaylist">C++ Music Playlist</Link>
+                <br />
+                <Link to="/BankersAlgorithm">Bankers Algorithm with C</Link>
             </div>
             <div class="Contact">
                 <h1>Contact Info:</h1>
@@ -26,12 +28,14 @@ function App() {
         </div>
         <div class="container">
             <div class="content">
-            <Introduction/>
+            <Introduction />
             </div>
             <div class = "image">
               <img src={me} alt="myProfileImage"/>
             </div>
           </div>
+
+      </div>  
     </>
   );
 }
@@ -56,4 +60,25 @@ function Introduction() {
       </p>
     </>
   )
-}
+};
+
+function NameTitle() {
+  return (
+    <div className='FrontPageTitle'>
+      <h1 style={{ paddingTop: '1rem', margin: 'auto 0', fontWeight: 'normal' }}>
+        {' '}
+        <span style={{fontWeight: 'bold' }}>
+          <Typewriter
+            words={['Victor Contreras']}
+            loop={true}
+            cursor
+            cursorStyle='_'
+            typeSpeed={80}
+            deleteSpeed={80}
+            delaySpeed={1500}
+          />
+        </span>
+      </h1>
+    </div>
+  )
+};
