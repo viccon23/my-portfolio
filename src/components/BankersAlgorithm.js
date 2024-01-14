@@ -13,18 +13,12 @@ const CPPMusicPlaylist = () => {
           </div>
           <div className="containerWordle">
             <p className="content">
-              This code implements a C++ program that simulates a playlist management system.
+              Stemming from my Operating Systems course, the Banker's Algorithm is a resource allocation and deadlock avoidance algorithm that ensures the safe execution of processes by carefully managing resource requests.
               <br />
-              It allows users to create a playlist, add tracks to the playlist, remove tracks,
+              You create a matrix of Processes and allocate a number of units to each Process, where you can request and release units from those processes to stimulate
               <br />
-              toggle track favorites, insert tracks at specifiic positions, display the playlist, 
-              <br />
-              and search for tracks by genre. The program utilizes various data structures such
-              <br />
-              as linked lists to manage the playlist and song information. It also includes a
-              <br />
-              menu-driven interface for user interation.
-              <a href="https://github.com/viccon23/Music-Playlist" className="center-link">- Github Link -</a>
+              how much resources your processes take similar to programs in task manager. Certain routes of requesting resources can lead to a deadlock, where a process is trying to request a resource that is already allocated to another process, and that process is requesting a resource that is already allocated to the process first mentioned, leading to a circular loop. When a process requests an allocated resource, that process gets blocked until the resource is freed again by the process its allocated to. So deadlock is an error that we must avoid, and the Bankers Algorithm helps with that.
+              <a href="https://github.com/viccon23/bankers-algorithm" className="center-link">- Github Link -</a>
             </p>
             <div className="image-container">
               <img src={null} alt="Image 1" />
