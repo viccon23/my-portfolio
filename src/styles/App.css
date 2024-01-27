@@ -27,8 +27,9 @@ html {
   }
 
   .mainPage {
-    width: 95%;
-    
+    display: flex;
+    align-items: center; /* vertical centering */
+    justify-content: center; /* horizontal centering */
   }
 
 
@@ -46,13 +47,13 @@ html {
 
 
   .FrontPageTitle {
+    font-family: monospace;
     padding-bottom: 50px;
     width: 100%;
     box-sizing: content-box;
     position: relative;
   }
   .FrontPageTitle h1 {
-    font-family: monospace;
     color: #ffffff;
     font-size: 80px;
     margin: 0;
@@ -64,7 +65,7 @@ html {
   p {
     font-family: monospace;
     color: #fff;
-    font-size: 22px;
+    font-size: 25px;
   }
   
   /* "a" refers to links, everything below controls the color and behavior of link objects */
@@ -119,21 +120,7 @@ html {
       flex-direction: column;
       float: left;
   }
-  .menu-link h1{
-    padding-left: 0px;
-    color:#fff;
-    font-size: 2rem;
-  }
-  .menu-link h3{
-    margin: 0px;
-    color:#fff;
-    font-family: monospace;
-    font-size: 1rem;
-  }
-  .menu-link a{
-    font-size:1.5em;
-    line-height: 2.5rem;
-  }
+
   .footer {
       padding: 20px;
       width: 30%;
@@ -179,6 +166,26 @@ html {
     padding-right: 50px;
   }
   
+  .project-container {
+    display: flex;
+    align-items: center; /* vertical centering */
+    justify-content: center; /* horizontal centering */
+    margin-top: 20px;
+    font-family: monospace;
+  }
+  
+  .project-info {
+    flex: 1;
+    padding: 10px;
+    background-color: #292929;
+  }
+  
+  .project-image {
+    flex: 1;
+    padding: 10px;
+    border-radius: 25%;
+    width: 400px;
+  }
 
   @media (max-width: 768px) {
     .menu-link {
@@ -186,3 +193,4 @@ html {
       margin: 1rem 0; /* Adjust margin for smaller screens */
     }
   }
+  

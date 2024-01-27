@@ -2,30 +2,16 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { Typewriter } from 'react-simple-typewriter'
 import '../styles/App.css';
-import me from '../images/me.jpg';
+import me from '../images/me.jpg'; import wordie2Image from '../images/Wordie2.png';
+
+
+
 
 function App() {
   return (
     <>
+      <NameTitle />
       <div class="mainPage">
-        <NameTitle />
-        <div class="menu-link">
-            <div class="projects">
-                <h1>Projects:</h1>
-                <Link to="/Wordle">Python Wordle Clone</Link>
-                <br />
-                <Link to="/DiscordMessageBot">Discord Message Bot</Link>
-                <br />
-                <Link to="/CPPMusicPlaylist">C++ Music Playlist</Link>
-                <br />
-                <Link to="/BankersAlgorithm">Bankers Algorithm with C</Link>
-            </div>
-            <div class="Contact">
-                <h1>Contact Info:</h1>
-                <h3>Email: victor.contreras23@aol.com</h3>
-                <h3>Phone: (956) 459-3249</h3>
-            </div>
-        </div>
         <div class="container">
             <div class="content">
             <Introduction />
@@ -33,9 +19,17 @@ function App() {
             <div class = "image">
               <img src={me} alt="myProfileImage"/>
             </div>
-          </div>
-
+        </div>
       </div>  
+
+      <div className="projects-list">
+          <Project
+            title=<h1>Python Wordle Clone</h1>
+            description="A Python project that clones the Wordle game."
+            imagePath={wordie2Image}
+            link="/Wordle"
+          />
+        </div>
     </>
   );
 }
@@ -48,7 +42,7 @@ function Introduction() {
     <>
       <p>
           Hello, my name is Victor and I'm a Computer Science student at UTRGV. This website began on April 29, 2023, and will be continually updated to feature personal projects and anything new that is well.... worth including in a personal website.
-    I am currently insterested in Networking, Web Development, Software Engineering and Machine Learning, and will be working on projects with a focus on the last 2 fields.
+    I am currently insterested in Networking, Web Development, Software Engineering and Machine Learning.
       </p>
 
       <p>
@@ -82,3 +76,18 @@ function NameTitle() {
     </div>
   )
 };
+
+function Project({ title, description, imagePath, link }) {
+  return (
+    <div className="project-container">
+      <div className="project-info">
+        <h2>{title}</h2>
+        <p>{description}</p>
+        <Link to={link}>Learn More</Link>
+      </div>
+      <div className="project-image">
+        <img src={imagePath} alt="WordleImage"/>
+      </div>
+    </div>
+  );
+}
