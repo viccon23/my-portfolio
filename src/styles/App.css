@@ -4,35 +4,15 @@ You can use this to set the background color, margins, etc. as shown below
 */
 
 html {
-  background: linear-gradient(
-    to bottom,
-    hsl(0, 0%, 49%) 0%,
-    hsl(0, 0%, 48.57%) 7.3%,
-    hsl(0, 0%, 47.34%) 12.9%,
-    hsl(0, 0%, 45.41%) 16.9%,
-    hsl(0, 0%, 42.86%) 20%,
-    hsl(0, 0%, 39.78%) 22.4%,
-    hsl(0, 0%, 36.27%) 24.5%,
-    hsl(0, 0%, 32.41%) 26.9%,
-    hsl(0, 0%, 28.3%) 29.8%,
-    hsl(0, 0%, 24.02%) 33.7%,
-    hsl(0, 0%, 19.67%) 39%,
-    hsl(0, 0%, 15.34%) 46%,
-    hsl(0, 0%, 11.12%) 55.2%,
-    hsl(0, 0%, 7.09%) 67%,
-    hsl(0, 0%, 3.36%) 81.8%,
-    hsl(0, 0%, 0%) 100%
-  );
-  height: 100%;
-  }
+  background: gray;
+}
 
-  .mainPage {
-    display: flex;
-    align-items: center; /* vertical centering */
-    justify-content: center; /* horizontal centering */
-  }
-
-
+.mainPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 250px;
+}
 
   body {
   margin: 10px;
@@ -65,7 +45,7 @@ html {
   p {
     font-family: monospace;
     color: #fff;
-    font-size: 25px;
+    font-size: 32px;
   }
   
   /* "a" refers to links, everything below controls the color and behavior of link objects */
@@ -91,7 +71,9 @@ html {
   .container {
     display: flex;
     align-items: center;
-    width: 70%;
+    justify-content: center;
+    width: 70%; /* Change to 100% to center the content */
+    margin: 0 auto; /* Center the container */
   }
   /* Anything marked as class="content" will have options below attached */
   .content {
@@ -106,86 +88,79 @@ html {
   float: right;
   border-bottom: 0px none #000;
   }
-  
-  /* menu link settings */
-  .menu-link {
-    font-family: monospace;
-      margin: 5px;
-      border: 3px solid #757575;
-      width: 300px; /* set the width to 100% minus the width of the .sidebar */
-      padding: 5px;
-      box-sizing: border-box;
-      height: relative; /* set the height of the box */
-      display: flex;
-      flex-direction: column;
-      float: left;
-  }
 
-  .footer {
-      padding: 20px;
-      width: 30%;
-      height: 90px;
-      box-sizing: border-box;
-      position: absolute;
-      bottom: 0;
-      left: 0;
+  /* Initially hide elements */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+/* Make elements visible when they have the "visible" class */
+.reveal-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+  
+   .continuation p{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 80px;
   }
-  /* WORDLE PROJECT CSS */
-  .containerWordle {
+  .projectCards {
     display: flex;
-    align-items: center;
-  }
-  .image-container {
-      display: flex;
-      justify-content: space-between;
-      float: right;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    position: absolute;
+    left:27%;
   }
 
-  .image-container img {
-      width: 400px;
-      padding-right: 50px;
-  }
-  /* MESSAGE BOT CSS */
-  .containerMessage {
-    display:flex;
-    align-items: top;
-    padding-right: 0px;
-  }
-  .image-containerMessage img {
-    width:600px;
-    padding-right:20px;
-  }
+    .projects-list {
+      width: 100%; /* Set the width of the project list */
+      margin-bottom: 40px;
+    }
 
-  /* C++ PLAYLIST CSS */
-  .containerMusic {
-    align-items: top;
-    display:flex;
-  }
-  .image-containerMusic img {
-    width:650px;
-    padding-right: 50px;
-  }
-  
   .project-container {
     display: flex;
-    align-items: center; /* vertical centering */
-    justify-content: center; /* horizontal centering */
-    margin-top: 20px;
-    font-family: monospace;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 247, 255, 0.466);
+    transition: transform 0.3s ease-in-out;
+    height: 600px; /* Set your desired fixed height */
+    width: 60%; /* Set your desired fixed width */
+  
+    &:hover {
+      transform: scale(1.05);
+    }
   }
   
   .project-info {
-    flex: 1;
-    padding: 10px;
-    background-color: #292929;
+    padding: 16px;
   }
   
-  .project-image {
-    flex: 1;
-    padding: 10px;
-    border-radius: 25%;
-    width: 400px;
+  .project-info h2 {
+    margin-bottom: 8px;
+    color: #333;
   }
+  
+  .project-info p {
+    color: #666;
+  }
+
+  .project-image {
+    flex: 0 0 30%; /* Occupy 30% of the container width */
+  }
+  
+  .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  
+  
+
 
   @media (max-width: 768px) {
     .menu-link {
