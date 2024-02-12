@@ -4,14 +4,14 @@ You can use this to set the background color, margins, etc. as shown below
 */
 
 html {
-  background: gray;
+  background: rgb(34, 34, 34);
 }
 
 .mainPage {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 250px;
+  margin-bottom: 600px;
 }
 
   body {
@@ -109,9 +109,8 @@ html {
   .projectCards {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center items horizontally */
-    position: absolute;
-    left:27%;
+    position: relative;
+    left: 13%;
   }
 
     .projects-list {
@@ -128,6 +127,26 @@ html {
     transition: transform 0.3s ease-in-out;
     height: 600px; /* Set your desired fixed height */
     width: 60%; /* Set your desired fixed width */
+    background:
+    linear-gradient(
+      36deg,
+      hsl(0, 0%, 81%) 0%,
+      hsl(295.2, 0.38%, 78.16%) 9.4%,
+      hsl(295.2, 0.68%, 75.45%) 17.7%,
+      hsl(295.21, 0.92%, 72.83%) 25%,
+      hsl(295.21, 1.12%, 70.26%) 31.5%,
+      hsl(295.22, 1.31%, 67.69%) 37.5%,
+      hsl(295.23, 1.48%, 65.07%) 43%,
+      hsl(295.24, 1.65%, 62.33%) 48.2%,
+      hsl(295.25, 1.82%, 59.39%) 53.3%,
+      hsl(295.26, 2%, 56.16%) 58.5%,
+      hsl(295.28, 2.2%, 52.52%) 63.9%,
+      hsl(295.31, 2.62%, 48.29%) 69.6%,
+      hsl(295.35, 3.63%, 43.22%) 76%,
+      hsl(295.43, 5.53%, 36.86%) 83%,
+      hsl(295.62, 10.47%, 28.19%) 91%,
+      hsl(297.45, 92.16%, 10%) 100%
+    );
   
     &:hover {
       transform: scale(1.05);
@@ -144,7 +163,7 @@ html {
   }
   
   .project-info p {
-    color: #666;
+    color: #000000;
   }
 
   .project-image {

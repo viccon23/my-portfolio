@@ -58,7 +58,7 @@ function App() {
         <p> Below are some Projects I have currently done:</p>
       </div>
 
-      <div className="projectCards">
+      <div className=" main-page container projectCards">
           <div className="projects-list reveal-on-scroll">
             <Project
               title="Python Wordle Clone"
@@ -85,6 +85,10 @@ function App() {
             />
           </div>
       </div>
+
+        <div className="container continuation reveal-on-scroll">
+      <p> Want to hire me? Feel free to send me an email below, or any of my contact info on the social media links.</p>
+    </div>
     </>
     
   );
